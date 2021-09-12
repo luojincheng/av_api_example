@@ -2,9 +2,9 @@
 
 #### 介绍
 av_ffhls_Api是基于ffmpeg api开发的一款收取流（大华、海康等摄像头或rtsp视频源）完成hls直播、回看API函数。 
- 支持hls http file等协议的播放视频api函数
+av_ffplay_Api是基于ffplay api开发的一款  支持hls 、http、 file等协议的播放视频api函数。
 
-#### hls拉流api：av_ffhls_Api.so/av_ffhls_Api.dll(主要应用web云端) 
+#### hls拉流api：av_ffhls_Api.so/av_ffhls_Api.dll(主要应用web服务端) 
 
  1.拉流函数doHls
 	     int doHls(const char *sn, const char * cardIdFilePath ,const char *RtspUrl, const char *protocol, const char *outPath, const char *newTime, const  char *start_number, const  char *hls_time, const  char *stimeout,int *exitfun, void (*outParamFun)(int type, int cur_pkt_size, int sum_Pkt_Size, int stmpTime, char *folder, char *rtspUrl, char *outLog));
@@ -12,15 +12,15 @@ av_ffhls_Api是基于ffmpeg api开发的一款收取流（大华、海康等摄�
   参数
      (1)sn：试用版本sn:0d09419934dc4820056c05f6bfb394a994cfb5e9db2ea3761001c0960cf34bd0700cfbd17011060eb2a7aa1152431ebd85227d841c29a7ce3ec6708a7fb95c09f3df88ec002e6a0d6873d9b217a090bcd11b20f244c04f8327ced9a0e7bad9ee71e20352e139f50865976839dd4f484cab11db1743322527a87886b50d35ccdd加官网水印。
  
-    (2)cardIdFilePath:cardid存在路径
+    (2)cardIdFilePath:cardid存在路径,例如："./win32-x86-64/libs/ffmpeg/x64/cardid.png"
 
     (3)RtspUrl：rtsp地址,例如："udp""rtsp://127.0.0.1:8554/test01"
 
-    (4)protocol：支持tcp/udp连接。例如："udp"
+    (4)protocol：支持tcp/udp连接。例如："tcp"
 
     (5)outPath： ts文件保存路径。例如："F:\\temp\\video\\rtsp\\127_0_0_1_8554\\"
 
-    (6)newTime：每天重新生产视频存储路的路径。例如；"23:59:59" 在凌晨重新生成。(说明： 2021-01-01....2021-12-31每天视频保存的视频录像) 
+    (6)newTime：每天重新生产视频存储路的路径。例如；"23:59:59" 在凌晨重新生成。(说明： 2021-01-01....2021-12-31按日期生产回看文件夹) 
 
     (7)start_number：生产ts文件编号的起始位置（out0.ts）。例如:  "0"
 
@@ -46,7 +46,7 @@ av_ffhls_Api是基于ffmpeg api开发的一款收取流（大华、海康等摄�
 
     返回值
 
-     (1)  0:成功。注意：  永远不会返回，内部程序一直运行失败才会返回。
+     (1)  0:成功。注意：  永远不会返回，内部程序一直运行失败或完成才会返回。
 
      (2) -1：验证图片不存在
 
@@ -65,7 +65,7 @@ av_ffhls_Api是基于ffmpeg api开发的一款收取流（大华、海康等摄�
 
 #### 播放api：av_ffplay_Api.dll(主要应用pc客户端) 
 
- 说明： 支持hls http file等协议的播放视频api函数
+ 说明： 支持hls 、http、 file等协议的播放视频api函数
 
      1. 播放函数：doPlay
 
@@ -77,7 +77,7 @@ av_ffhls_Api是基于ffmpeg api开发的一款收取流（大华、海康等摄�
 
              (2) handle：显示窗口句柄
 
-             (3) duration：播放总时长
+             (3) duration：输出参数，播放总时长
 
      2. 调整进度(单位s)  double seekPos(double newPos);
 
