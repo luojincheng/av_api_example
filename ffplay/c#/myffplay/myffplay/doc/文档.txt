@@ -1,0 +1,5 @@
+﻿1.  this.Invoke(setDelegate); //异常   
+      错误提示:  System.ObjectDisposedException:“无法访问已释放的对象。  ObjectDisposed_ObjectName_Name”
+2.   pos = (int)getPos();  //异常
+      原因：Api内部访问空对象(已经释放对象)
+      解决：if (m_is!=NULL)

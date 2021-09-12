@@ -1,0 +1,9 @@
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\bin\Debug\myffplay.exe.config
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\bin\Debug\myffplay.exe
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\bin\Debug\myffplay.pdb
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\obj\Debug\myffplay.Form1.resources
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\obj\Debug\myffplay.Properties.Resources.resources
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\obj\Debug\myffplay.csproj.GenerateResource.cache
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\obj\Debug\myffplay.csproj.CoreCompileInputs.cache
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\obj\Debug\myffplay.exe
+E:\www\MYWORKSOFT\myffmpeg\ffplay\c#\myffplay\myffplay\obj\Debug\myffplay.pdb
