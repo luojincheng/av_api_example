@@ -1,7 +1,8 @@
 # av_api_example
 
 #### 介绍
-av_ffhls_Api是基于ffmpeg api开发的一款收取流（大华、海康等摄像头或rtsp视频源）完成hls直播、回看API函数。 
+av_ffhls_Api是基于ffmpeg api开发的一款收取流（大华、海康等摄像头或rtsp视频源）完成hls直播、回看API函数。
+ 
 av_ffplay_Api是基于ffplay api开发的一款  支持hls 、http、 file等协议的播放视频api函数。
 
 #### hls拉流api：av_ffhls_Api.so/av_ffhls_Api.dll(主要应用web服务端) 
